@@ -86,7 +86,7 @@ class AddNoteView extends GetView<AddNoteController> {
                       : controller.noteTextController.text,
                 );
                 listPriority.add(
-                  controller.selectedValue.value ?? 'HIGH',
+                  controller.selectedValue.value ?? '',
                 );
                 box.write('notes', list);
                 box.write('priority', listPriority);

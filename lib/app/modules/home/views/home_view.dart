@@ -48,7 +48,9 @@ class HomeView extends GetView<HomeController> {
                                     ? Colors.red
                                     : (note['priority'] == 'MEDIUM')
                                         ? Colors.yellow
-                                        : Colors.green,
+                                        : (note['priority'] == 'LOW')
+                                            ? Colors.green
+                                            : Colors.grey,
                                 shape: BoxShape.circle,
                               ),
                             ),
