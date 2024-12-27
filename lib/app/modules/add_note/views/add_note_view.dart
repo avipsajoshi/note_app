@@ -54,7 +54,7 @@ class AddNoteView extends GetView<AddNoteController> {
                             child: Text(
                               item,
                               style: const TextStyle(
-                                fontSize: 12,
+                                fontSize: 14,
                               ),
                             ),
                           ))
