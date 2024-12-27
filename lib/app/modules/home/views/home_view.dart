@@ -11,8 +11,9 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        title: const Text('Note'),
+        title: const Text('Your Notes'),
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
@@ -72,6 +73,8 @@ class HomeView extends GetView<HomeController> {
         onPressed: () {
           Get.toNamed(Routes.ADD_NOTE);
         },
+        backgroundColor: Get.theme.colorScheme.tertiary,
+        foregroundColor: Get.theme.colorScheme.onTertiary,
         child: const Icon(Icons.add),
       ),
     );

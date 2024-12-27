@@ -19,14 +19,13 @@ class HomeController extends GetxController {
 
   @override
   void onReady() {
+    super.onReady();
     var list = box.read('notes') as List? ?? [];
     var listPriority = box.read('priority') ?? [];
     List? notelist = [];
     for (var i = 0; i < list.length; i++) {
       notelist.add({'note': list[i], 'priority': listPriority[i]});
     }
-
     notes.value = notelist;
-    super.onReady();
   }
 }
